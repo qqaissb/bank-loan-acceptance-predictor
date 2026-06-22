@@ -1,4 +1,4 @@
-\# Responsible AI for Personal Loan Acceptance Prediction
+# Responsible AI for Personal Loan Acceptance Prediction
 
 
 
@@ -6,15 +6,15 @@ A university artificial intelligence project exploring how machine learning can 
 
 
 
-The system predicts whether a customer is likely to \*\*accept a personal loan offer\*\* using demographic, financial, and banking-behaviour data. The project combines exploratory customer segmentation, baseline classification models, Azure AutoML enhancement, performance benchmarking, and responsible AI analysis.
+The system predicts whether a customer is likely to **accept a personal loan offer** using demographic, financial, and banking-behaviour data. The project combines exploratory customer segmentation, baseline classification models, Azure AutoML enhancement, performance benchmarking, and responsible AI analysis.
 
 
 
-> \*\*Important:\*\* This project predicts customer interest in a loan offer. It does not determine creditworthiness, loan eligibility, interest rates, or whether a loan application should be approved.
+> **Important:** This project predicts customer interest in a loan offer. It does not determine creditworthiness, loan eligibility, interest rates, or whether a loan application should be approved.
 
 
 
-\## Project Objectives
+## Project Objectives
 
 
 
@@ -22,25 +22,25 @@ The main objectives of this project were to:
 
 
 
-\* Explore customer subgroups using K-Means clustering.
+* Explore customer subgroups using K-Means clustering.
 
-\* Develop K-Nearest Neighbours and Artificial Neural Network baseline classifiers.
+* Develop K-Nearest Neighbours and Artificial Neural Network baseline classifiers.
 
-\* Use Azure Automated Machine Learning to explore an enhanced model.
+* Use Azure Automated Machine Learning to explore an enhanced model.
 
-\* Compare models using multiple classification metrics.
+* Compare models using multiple classification metrics.
 
-\* Analyse explainability, fairness, privacy, security, monitoring, and legal accountability.
+* Analyse explainability, fairness, privacy, security, monitoring, and legal accountability.
 
-\* Evaluate whether the system is suitable for responsible deployment in a real banking environment.
-
-
-
-\## Dataset
+* Evaluate whether the system is suitable for responsible deployment in a real banking environment.
 
 
 
-The project uses an anonymized personal-loan customer dataset containing \*\*5,000 customer records\*\*.
+## Dataset
+
+
+
+The project uses an anonymized personal-loan customer dataset containing **5,000 customer records**.
 
 
 
@@ -48,29 +48,29 @@ The dataset includes demographic, financial, and banking-related attributes such
 
 
 
-\* Age
+* Age
 
-\* Annual income
+* Annual income
 
-\* Family size
+* Family size
 
-\* Average credit-card spending
+* Average credit-card spending
 
-\* Education level
+* Education level
 
-\* Mortgage value
+* Mortgage value
 
-\* Securities-account ownership
+* Securities-account ownership
 
-\* Certificate-of-deposit account ownership
+* Certificate-of-deposit account ownership
 
-\* Online-banking usage
+* Online-banking usage
 
-\* Bank credit-card ownership
+* Bank credit-card ownership
 
 
 
-\### Target Variable
+### Target Variable
 
 
 
@@ -92,7 +92,7 @@ The dataset is imbalanced, with substantially more customers in class `0` than i
 
 
 
-\## Project Workflow
+## Project Workflow
 
 
 
@@ -100,31 +100,31 @@ The main implementation stages were:
 
 
 
-1\. Load and inspect the dataset.
+1. Load and inspect the dataset.
 
-2\. Check for missing values, duplicate rows, invalid values, and feature relationships.
+2. Check for missing values, duplicate rows, invalid values, and feature relationships.
 
-3\. Remove identifiers and unsuitable features.
+3. Remove identifiers and unsuitable features.
 
-4\. Separate the input features from the target variable.
+4. Separate the input features from the target variable.
 
-5\. Split the data into training and testing sets.
+5. Split the data into training and testing sets.
 
-6\. Scale the input features using `StandardScaler`.
+6. Scale the input features using `StandardScaler`.
 
-7\. Explore customer groups using K-Means clustering.
+7. Explore customer groups using K-Means clustering.
 
-8\. Train KNN and ANN baseline classifiers.
+8. Train KNN and ANN baseline classifiers.
 
-9\. Run an Azure AutoML classification experiment.
+9. Run an Azure AutoML classification experiment.
 
-10\. Compare model performance.
+10. Compare model performance.
 
-11\. Evaluate technical, ethical, legal, and security considerations.
+11. Evaluate technical, ethical, legal, and security considerations.
 
 
 
-\## Data Preparation
+## Data Preparation
 
 
 
@@ -132,11 +132,11 @@ The following columns were excluded from the classification inputs:
 
 
 
-\* `ID`, because it is only a customer identifier.
+* `ID`, because it is only a customer identifier.
 
-\* `ZIP Code`, because it is a geographic code and should not be treated as a continuous numerical value.
+* `ZIP Code`, because it is a geographic code and should not be treated as a continuous numerical value.
 
-\* `Experience`, because it contained invalid negative values and was highly correlated with `Age`.
+* `Experience`, because it contained invalid negative values and was highly correlated with `Age`.
 
 
 
@@ -144,7 +144,7 @@ Feature scaling was applied because KNN and K-Means depend directly on distance 
 
 
 
-\## Customer Segmentation
+## Customer Segmentation
 
 
 
@@ -156,17 +156,17 @@ The number of clusters was assessed using:
 
 
 
-\* The elbow method
+* The elbow method
 
-\* Silhouette scores
+* Silhouette scores
 
-\* PCA visualization
+* PCA visualization
 
-\* Cluster interpretability
+* Cluster interpretability
 
 
 
-The elbow method suggested six clusters, while the silhouette analysis supported two clusters. A final value of \*\*K = 2\*\* was selected because it produced more distinct and interpretable customer groups.
+The elbow method suggested six clusters, while the silhouette analysis supported two clusters. A final value of **K = 2** was selected because it produced more distinct and interpretable customer groups.
 
 
 
@@ -174,11 +174,11 @@ The resulting clusters showed different financial profiles and different persona
 
 
 
-\## Classification Models
+## Classification Models
 
 
 
-\### K-Nearest Neighbours
+### K-Nearest Neighbours
 
 
 
@@ -190,7 +190,7 @@ The model was trained using scaled data, and different values of `K` were evalua
 
 
 
-\### Artificial Neural Network
+### Artificial Neural Network
 
 
 
@@ -202,19 +202,19 @@ Its architecture included:
 
 
 
-\* Dense hidden layers
+* Dense hidden layers
 
-\* ReLU activation functions
+* ReLU activation functions
 
-\* A sigmoid output layer for binary classification
+* A sigmoid output layer for binary classification
 
-\* Binary cross-entropy loss
+* Binary cross-entropy loss
 
-\* The Adam optimizer
+* The Adam optimizer
 
 
 
-\### Azure AutoML VotingEnsemble
+### Azure AutoML VotingEnsemble
 
 
 
@@ -230,7 +230,7 @@ Azure workspace files, cloud resources, and screenshots are not included in this
 
 
 
-\## Model Results
+## Model Results
 
 
 
@@ -246,7 +246,7 @@ Azure workspace files, cloud resources, and screenshots are not included in this
 
 
 
-\## Results Interpretation
+## Results Interpretation
 
 
 
@@ -266,13 +266,13 @@ The final model choice therefore depends on the bank’s objective:
 
 
 
-\* The \*\*ANN\*\* is more suitable when identifying as many potential acceptors as possible is the priority.
+* The **ANN** is more suitable when identifying as many potential acceptors as possible is the priority.
 
-\* The \*\*Azure VotingEnsemble\*\* is more suitable when reducing false-positive marketing targets and wasted marketing resources is the priority.
+* The **Azure VotingEnsemble** is more suitable when reducing false-positive marketing targets and wasted marketing resources is the priority.
 
 
 
-\### Evaluation Limitation
+### Evaluation Limitation
 
 
 
@@ -288,11 +288,11 @@ A stronger future comparison would evaluate all models using the same dataset ve
 
 
 
-\## Responsible AI Considerations
+## Responsible AI Considerations
 
 
 
-\### Fairness and Bias
+### Fairness and Bias
 
 
 
@@ -304,7 +304,7 @@ Before deployment, the bank should compare error rates across relevant customer 
 
 
 
-\### Explainability
+### Explainability
 
 
 
@@ -316,15 +316,15 @@ Explainability techniques should be used to determine:
 
 
 
-\* Which features influence predictions most strongly.
+* Which features influence predictions most strongly.
 
-\* Whether the model relies excessively on individual variables.
+* Whether the model relies excessively on individual variables.
 
-\* Why a particular customer received a positive or negative prediction.
+* Why a particular customer received a positive or negative prediction.
 
 
 
-\### Privacy and Data Protection
+### Privacy and Data Protection
 
 
 
@@ -336,21 +336,21 @@ A real implementation should apply:
 
 
 
-\* Access controls
+* Access controls
 
-\* Encryption
+* Encryption
 
-\* Data minimization
+* Data minimization
 
-\* Secure storage
+* Secure storage
 
-\* Audit logging
+* Audit logging
 
-\* Clear data-retention rules
+* Clear data-retention rules
 
 
 
-\### Security
+### Security
 
 
 
@@ -358,15 +358,15 @@ The system may be exposed to threats such as:
 
 
 
-\* Unauthorized access to customer data
+* Unauthorized access to customer data
 
-\* Training-data poisoning
+* Training-data poisoning
 
-\* Manipulated retraining records
+* Manipulated retraining records
 
-\* Model theft
+* Model theft
 
-\* Insecure cloud configuration
+* Insecure cloud configuration
 
 
 
@@ -374,7 +374,7 @@ The bank should validate the origin and integrity of new training data before re
 
 
 
-\### Monitoring and Model Drift
+### Monitoring and Model Drift
 
 
 
@@ -386,19 +386,19 @@ After deployment, the bank should monitor:
 
 
 
-\* Precision
+* Precision
 
-\* Recall
+* Recall
 
-\* F1 score
+* F1 score
 
-\* Input-feature distributions
+* Input-feature distributions
 
-\* Prediction distributions
+* Prediction distributions
 
-\* System reliability
+* System reliability
 
-\* Data quality
+* Data quality
 
 
 
@@ -406,7 +406,7 @@ Retraining should only occur using validated data, and every replacement model s
 
 
 
-\### Human Oversight and Accountability
+### Human Oversight and Accountability
 
 
 
@@ -418,23 +418,23 @@ The bank remains responsible for:
 
 
 
-\* The data used to train the system.
+* The data used to train the system.
 
-\* The model selected for deployment.
+* The model selected for deployment.
 
-\* How predictions are interpreted.
+* How predictions are interpreted.
 
-\* How customers are targeted.
+* How customers are targeted.
 
-\* Any harm caused by incorrect or unfair use.
-
-
-
-\## Deployment Assessment
+* Any harm caused by incorrect or unfair use.
 
 
 
-The system should \*\*not be deployed in its current form as a fully automated production system\*\*.
+## Deployment Assessment
+
+
+
+The system should **not be deployed in its current form as a fully automated production system**.
 
 
 
@@ -442,45 +442,45 @@ It may be used as a controlled decision-support prototype, provided that:
 
 
 
-\* Humans review the model’s recommendations.
+* Humans review the model’s recommendations.
 
-\* Fairness testing is completed.
+* Fairness testing is completed.
 
-\* Explainability tools are introduced.
+* Explainability tools are introduced.
 
-\* Production monitoring is established.
+* Production monitoring is established.
 
-\* Security controls are implemented.
+* Security controls are implemented.
 
-\* Data usage and accountability responsibilities are documented.
+* Data usage and accountability responsibilities are documented.
 
-\* The final model is selected according to clearly defined business objectives.
-
-
-
-\## Current Limitations
+* The final model is selected according to clearly defined business objectives.
 
 
 
-\* The dataset contains only 5,000 records.
-
-\* The target classes are imbalanced.
-
-\* The baseline and Azure evaluations used different testing procedures.
-
-\* Azure AutoML was limited to five trials.
-
-\* Fairness was discussed but not experimentally measured.
-
-\* No production monitoring pipeline was implemented.
-
-\* No live banking system was integrated.
-
-\* The results should not be generalized to real customers without additional validation.
+## Current Limitations
 
 
 
-\## Repository Contents
+* The dataset contains only 5,000 records.
+
+* The target classes are imbalanced.
+
+* The baseline and Azure evaluations used different testing procedures.
+
+* Azure AutoML was limited to five trials.
+
+* Fairness was discussed but not experimentally measured.
+
+* No production monitoring pipeline was implemented.
+
+* No live banking system was integrated.
+
+* The results should not be generalized to real customers without additional validation.
+
+
+
+## Repository Contents
 
 
 
@@ -490,7 +490,7 @@ responsible-ai-loan-prediction/
 
 ├── FoAI.ipynb
 
-├── bank\_personal\_loan\_data.csv
+├── bank_personal_loan_data.csv
 
 ├── Dataset Metadata.pdf
 
@@ -500,7 +500,7 @@ responsible-ai-loan-prediction/
 
 
 
-\## Intended Use
+## Intended Use
 
 
 
@@ -508,15 +508,15 @@ This repository is intended for:
 
 
 
-\* Academic learning
+* Academic learning
 
-\* Machine-learning experimentation
+* Machine-learning experimentation
 
-\* Portfolio demonstration
+* Portfolio demonstration
 
-\* Responsible AI analysis
+* Responsible AI analysis
 
-\* Model-comparison practice
+* Model-comparison practice
 
 
 
